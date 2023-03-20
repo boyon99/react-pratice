@@ -27,9 +27,3 @@ npm start
 #### framer-motion
 
 [Framer Motion](https://www.framer.com/motion/)은 리액트를 위한 웹 애니메이션, 제스처 오픈소스 라이브러리이다.
-
-#### sass
-
-```console
-npm add sass
-```
