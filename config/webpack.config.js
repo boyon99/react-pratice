@@ -489,17 +489,40 @@ module.exports = function (webpackEnv) {
             // Adds support for CSS Modules (https://github.com/css-modules/css-modules)
             // using the extension .module.css
             {
-              test: cssModuleRegex,
+              test: sassRegex,
+              exclude: sassModuleRegex,
               use: getStyleLoaders({
-                importLoaders: 1,
+                importLoaders: 3,
                 sourceMap: isEnvProduction
                   ? shouldUseSourceMap
                   : isEnvDevelopment,
-                modules: {
-                  mode: 'local',
-                  getLocalIdent: getCSSModuleLocalIdent,
+              }).concat({
+                loader: require.resolve("sass-loader"),
+                options: {
+                  sassOptions: {
+                    includePaths: [paths.appSrc + "/styles"],
+                  },
+                  additionalData: "@import 'utils';",
                 },
               }),
+              sideEffects: true,
+            },
+            // Adds support for CSS Modules, but using SASS
+            // using the extension .module.scss or .module.sass
+            {
+              test: sassModuleRegex,
+              use: getStyleLoaders(
+                {
+                  importLoaders: 3,
+                  sourceMap: isEnvProduction
+                    ? shouldUseSourceMap
+                    : isEnvDevelopment,
+                  modules: {
+                    getLocalIdent: getCSSModuleLocalIdent,
+                  },
+                },
+                "sass-loader"
+              ),
             },
             // Opt-in support for SASS (using .scss or .sass extensions).
             // By default we support SASS Modules with the
