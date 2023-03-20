@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import IterationSample from "./6/IterationSample";
 import LifeCycleSample from "./7/LifeCycleSample";
 import ErrorBoundary from "./7/ErrorBoundary";
-import "./App.css";
+import "./App.scss";
 
 function getRandomColor() {
   return "#" + Math.floor(Math.random() * 16777215).toString(16);
