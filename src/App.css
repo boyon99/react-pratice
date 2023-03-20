@@ -1,6 +1,27 @@
+body {
+  display: flex;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid #000000;
+  margin: 0 2px;
+  padding: 1px 10px;
+  cursor: pointer;
+}
+
 .IterationSample {
   width: 200px;
   height: auto;
   padding: 10px;
-  background-color: rgba(174, 174, 174, .5);
+  background-color: rgba(174, 174, 174, .3);
+  margin: 10px 0;
+}
+
+.LifeCycleSample {
+  width: 200px;
+  height: auto;
+  padding: 10px;
+  background-color: rgba(174, 174, 174, .3);
+  margin: 10px 0;
 }
