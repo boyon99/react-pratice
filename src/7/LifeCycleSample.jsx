@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class LifeCycleSample extends Component {
   // ref 설정
@@ -7,7 +7,7 @@ class LifeCycleSample extends Component {
   // porps값을 상속받거나 초기 state를 설정할 수 있다.
   constructor(props) {
     super(props); // #000000
-    console.log("constructor");
+    console.log('constructor');
     this.state = {
       number: 0,
       color: null,
@@ -17,7 +17,7 @@ class LifeCycleSample extends Component {
   // getDerivedStateFromProps을 통해 받아온 props를 state에 동기화한다.
   static getDerivedStateFromProps(nextProps, prevState) {
     // nextProps는 받아온 props 값인 #000000이며 prevState는 this.state 값이다.
-    console.log("getDerivedStateFromProps");
+    console.log('getDerivedStateFromProps');
     if (nextProps.color !== prevState.color) {
       return { color: nextProps.color };
     }
@@ -25,17 +25,17 @@ class LifeCycleSample extends Component {
   }
 
   componentDidMount() {
-    console.log("componentDidMount");
+    console.log('componentDidMount');
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log("shouldComponentUpdate", nextProps, nextState);
+    console.log('shouldComponentUpdate', nextProps, nextState);
     // 숫자의 마지막 자리가 4면 리렌더링하지 않는다.
     return nextState.number % 10 !== 4;
   }
 
   componentWillUnmount() {
-    console.log("componentWillUnmount");
+    console.log('componentWillUnmount');
   }
 
   handleClick = () => {
@@ -44,8 +44,9 @@ class LifeCycleSample extends Component {
     });
   };
 
+  // eslint-disable-next-line no-unused-vars
   getSnapshotBeforeUpdate(prevProps, prevState) {
-    console.log("getSnapshotBeforeUpdate");
+    console.log('getSnapshotBeforeUpdate');
     if (prevProps.color !== this.props.color) {
       return this.myRef.style.color;
     }
@@ -53,14 +54,14 @@ class LifeCycleSample extends Component {
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    console.log("componentDidUpdate", prevProps, prevState);
+    console.log('componentDidUpdate', prevProps, prevState);
     if (snapshot) {
-      console.log("업데이트되기 직전 색상: ", snapshot);
+      console.log('업데이트되기 직전 색상: ', snapshot);
     }
   }
 
   render() {
-    console.log("render");
+    console.log('render');
     const style = {
       color: this.props.color,
     };
