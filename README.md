@@ -27,3 +27,23 @@ npm start
 #### framer-motion
 
 [Framer Motion](https://www.framer.com/motion/)은 리액트를 위한 웹 애니메이션, 제스처 오픈소스 라이브러리이다.
+
+#### react-icons
+
+[react-icons](https://react-icons.github.io/react-icons/icons?name=ai)은 아이콘을 지원하는 라이브러리이다.
+
+```console
+npm add react-icons
+```
+
+```js
+import { 아이콘 이름 } from 'react-icons/md'
+
+const icons = () => {
+  return (
+    <>
+      <MdAdd />
+    </>
+  )
+}
+```
