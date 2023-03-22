@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 const Info = () => {
-  const [name, setName] = useState("");
-  const [nickname, setNickname] = useState("");
+  const [name, setName] = useState('');
+  const [nickname, setNickname] = useState('');
 
   useEffect(() => {
-    console.log("렌더링이 완료되었습니다.");
+    console.log('렌더링이 완료되었습니다.');
     console.log({ name, nickname });
     return () => {
-      console.log("clean up");
+      console.log('clean up');
     };
   }, [name]);
 
