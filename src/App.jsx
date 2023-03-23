@@ -1,5 +1,5 @@
 import React from 'react';
-import Chapter from './17/App';
+import Chapter from './15/App';
 import './App.scss';
 
 const App = () => {
