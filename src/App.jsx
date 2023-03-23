@@ -1,11 +1,14 @@
 import React from 'react';
-import Chapter from './15/App';
+import Chapter from './17/App';
+import './App.scss';
 
 const App = () => {
   return (
     <div>
-      <h1>Hello</h1>
-      <Chapter />
+      <div className="start">React</div>
+      <div className="content">
+        <Chapter />
+      </div>
     </div>
   );
 };

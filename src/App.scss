@@ -1,4 +1,6 @@
 body {
+  padding: 0;
+  margin: 0;
   display: flex;
   button {
     background-color: transparent;
@@ -7,4 +9,18 @@ body {
     padding: 1px 10px;
     cursor: pointer;
   }
+}
+
+.start {
+  width: 100vw;
+  height: auto;
+  background-color: #000000;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #fff;
+  padding: 10px;
+}
+
+.content {
+  margin: 0 0 0 10px;
 }
