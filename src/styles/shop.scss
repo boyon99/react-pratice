@@ -1,0 +1,36 @@
+.main-bg {
+  height: 300px;
+  background-image: url('../shop/img/bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  .alert {
+    background-color: black;
+    width: 400px;
+    margin: 0 auto;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    display: flex;
+    span {
+      font-size: 12px;
+    }
+  }
+  .start {
+    opacity: 0;
+  }
+  .end {
+    opacity: 1;
+    transition: opacity 0.5s;
+  }
+}
+
+.app {
+  .btn--add {
+    margin: 10px 0 10px 43vw;
+  }
+}

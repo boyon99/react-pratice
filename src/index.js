@@ -3,24 +3,22 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
-/** 
-import { legacy_createStore as createStore } from 'redux';
-import rootReducer from './17/modules'
+import store from './shop/store.js'
 import { Provider } from 'react-redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
-// store 생성하기
-const store = createStore(rootReducer, composeWithDevTools())
-*/
+const queryClient = new QueryClient()
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-  // <Provider store={store}>
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-  // </Provider>
+  <QueryClientProvider client={queryClient}>
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
+  </QueryClientProvider>
   // </React.StrictMode>
 );
 reportWebVitals();

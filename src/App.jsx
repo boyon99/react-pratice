@@ -1,13 +1,13 @@
 import React from 'react';
-import Chapter from './15/App';
+import Shop from './shop/App';
 import './App.scss';
 
 const App = () => {
   return (
     <div>
-      <div className="start">React</div>
+      <div className="hello">Hello React</div>
       <div className="content">
-        <Chapter />
+        <Shop />
       </div>
     </div>
   );
