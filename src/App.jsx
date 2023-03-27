@@ -2,7 +2,8 @@ import React from 'react';
 // import Shop from './shop/App';
 import './App.scss';
 // import Test from './Test';
-import Reducer from './reducer/App';
+// import Reducer from './reducer/App';
+import Chapter from './17/App';
 
 const App = () => {
   return (
@@ -11,7 +12,8 @@ const App = () => {
       <div className="content">
         {/* <Shop /> */}
         {/* <Test /> */}
-        <Reducer />
+        {/* <Reducer /> */}
+        <Chapter />
       </div>
     </div>
   );
