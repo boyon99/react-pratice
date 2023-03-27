@@ -2,7 +2,7 @@ import React from 'react';
 // import Shop from './shop/App';
 import './App.scss';
 // import Test from './Test';
-import StateManagement from './StateManagement/App';
+import Reducer from './reducer/App';
 
 const App = () => {
   return (
@@ -11,7 +11,7 @@ const App = () => {
       <div className="content">
         {/* <Shop /> */}
         {/* <Test /> */}
-        <StateManagement />
+        <Reducer />
       </div>
     </div>
   );
