@@ -1,20 +1,20 @@
 import React from 'react';
-// import Shop from './shop/App';
 import './App.scss';
+// import Shop from './shop/App';
 // import Test from './Test';
-// import Reducer from './reducer/App';
-import Chapter from './17/App';
+// import Chapter from './17/App';
+import Counter from './toolkits/App';
 
 const App = () => {
   return (
     <div>
-      <div className="hello">Hello React</div>
       <div className="content">
         {/* <Shop /> */}
         {/* <Test /> */}
-        {/* <Reducer /> */}
-        <Chapter />
+        {/* <Chapter /> */}
+        <Counter />
       </div>
+      <div className="hello">Hello React</div>
     </div>
   );
 };
