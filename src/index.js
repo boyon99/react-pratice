@@ -1,31 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Provider } from 'react-redux';
 import App from './App';
-import rootReducer from './17/modules'
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
-// import store from './shop/store.js'
-import { QueryClient, QueryClientProvider } from 'react-query';
-import { applyMiddleware, legacy_createStore as createStore } from 'redux';
+
+// redux
+import { Provider } from 'react-redux';
+
+// 리덕스 미들웨어
 // import { composeWithDevTools } from 'redux-devtools-extension';
-import ReduxThunk from 'redux-thunk'
+import { applyMiddleware, legacy_createStore, compose } from '@reduxjs/toolkit';
+import logger from 'redux-logger';
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-// const store = createStore(rootReducer, composeWithDevTools())
-const store = createStore(rootReducer, applyMiddleware(ReduxThunk))
+import rootReducer from './17/modules'
+const store = legacy_createStore(rootReducer, composeEnhancers(applyMiddleware(logger)))
 
-const queryClient = new QueryClient()
+// import store from './shop/store.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  // <React.StrictMode>
-  <QueryClientProvider client={queryClient}>
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
-  </QueryClientProvider>
-  // </React.StrictMode>
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>
 );
 reportWebVitals();
