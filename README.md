@@ -30,7 +30,9 @@ npm start
 
 https://velog.io/@homile/react-vite
 
--
+```shell
+npm create vite@latest
+```
 
 ## libreay
 
