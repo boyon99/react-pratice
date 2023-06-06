@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef, useCallback } from "react";
+import React, { useState, useMemo, useRef, useCallback } from 'react';
 
 const getAverage = (numbers) => {
   if (numbers.length === 0) return 0;
@@ -6,9 +6,9 @@ const getAverage = (numbers) => {
   return sum / numbers.length;
 };
 
-const Average = () => {
+const UseMemo = () => {
   const [list, setList] = useState([]);
-  const [number, setNumber] = useState("");
+  const [number, setNumber] = useState('');
   const inputEl = useRef(null);
 
   const onChange = useCallback((e) => {
@@ -19,7 +19,7 @@ const Average = () => {
   const onInsert = useCallback(() => {
     const nextList = list.concat(parseInt(number));
     setList(nextList);
-    setNumber("");
+    setNumber('');
     inputEl.current.focus();
   }, [number, list]); // number 혹은 list 가 바뀌었을 때만 함수 생성
 
@@ -42,4 +42,4 @@ const Average = () => {
   );
 };
 
-export default Average;
+export default UseMemo;
