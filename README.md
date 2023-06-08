@@ -15,17 +15,17 @@ npm start
 
 > 오류) 전역설치 `-g`을 했기 때문에 생긴 오류로 앞에 `sudo` 명령어를 입력한다.
 
-
 #### React 프로젝트에서 Typescript 사용할 경우
+
 ```console
 // 이미 있는 React 프로젝트에 설치할 경우
 npm install --save typescript @types/node @types/react @types/react-dom @types/jest
 ```
+
 ```console
 // React 프로젝트를 새로 생성할 경우
 npx create-react-app my-app --template typescript
 ```
-
 
 ## vite
 
@@ -41,36 +41,3 @@ npm run dev
 ```console
 yarn create vite [프로젝트 명] --template react-ts
 ```
-
-
-## libreay
-
-#### framer-motion와 react-spring
-
-[Framer Motion](https://www.framer.com/motion/)와 [react-spring](https://www.react-spring.dev/) 리액트를 위한 웹 애니메이션, 제스처 오픈소스 라이브러리이다.
-
-#### react-icons
-
-[react-icons](https://react-icons.github.io/react-icons/icons?name=ai)은 아이콘을 지원하는 라이브러리이다.
-
-```console
-npm add react-icons
-```
-
-```js
-import { 아이콘 이름 } from 'react-icons/md'
-
-const icons = () => {
-  return (
-    <>
-      <MdAdd />
-    </>
-  )
-}
-```
-
-#### react-query와 swr
-
-[react-query](https://github.com/TanStack/query#readme)는 서버의 값을 클라이언트에 가져오거나, 캐싱, 값 업데이트, 에러핸들링 등 비동기 과정을 더욱 편하게 하는데 사용되는 라이브러리이다.
-
-[swr](https://swr.vercel.app/ko)이란 HTTP 캐시 무효화 전략에서 유래된 데이터 페칭을 위한 리액트 라이브러리이다.
